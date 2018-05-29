@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>텍스트 입력 폼</title>
+</head>
+<body>
+<h3>자기소개서 작성</h3>
+<hr>
+<form>
+	이름 : <input type="text" value=""><br>
+	암호 : <input type="password" value="" maxlength="4"><br>
+	자소서 : <textarea cols="20" rows="5">이곳에 자기소개서 작성</textarea><br>
+	나라 : <input type="text" list="countries">
+	<datalist id="countries">
+		<option value="가나"> <option value="스위스"> <option value="브라질">
+	</datalist><br>
+	검색 : <input type="text" size="10" value="">
+		 <input type="button" value="Q1">
+		 <button type="button">Q2</button><br>
+	submit 버튼 : <input type="submit" value="전송1">
+				<button type="submit">전송2</button><br>
+	reset 버튼 : <input type="reset" value="리셋1">
+				<button tupe="reset">리셋2</button><br>
+	이미지 버튼 : <input type="image" src="media/button.png" alt="이미지 버튼">
+		<button type="image"><img src="media/button.png" alt="이미지버튼"></button>
+</form>
+</body>
+</html>
