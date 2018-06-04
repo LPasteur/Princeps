@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TABLE tag</title>
+</head>
+<body>
+  <table border="1" width="600px">
+    <thead>
+      <tr><th colspan="2" align="center" style="background-color:yellow">성적표</th></tr>
+    </thead>
+    <tbody>
+      <tr><th>이름</th><td><input type="text" size="10" value=""></td></tr>
+      <tr><th>학번</th><td><input type="text" size="10" value=""></td></tr>
+      <tr><th>학년</th><td><form>
+        <select name="학년">
+          <option value="1">1학년</option>
+          <option value="2">2학년</option>
+          <option value="3">3학년</option>
+          <option value="4">4학년</option>
+          <option value="5">5학년</option>
+          <option value="6">6학년</option>
+        </select></form>
+      </td></tr>
+      <tr><th>학과</th><td><input type="text" size="20" value=""></td></tr>
+      <tr><th>필수여부</th><td><form>
+        <input type="radio" name="필수" value="필수">필수</input>
+        <input type="radio" name="필수" value="미필수">미필수</input>
+      </form></td></tr>
+      <tr><th>성적</th><td>국어:<input type="text" name="kor" size="5"> &nbsp;&nbsp; 영어:<input type="text" name="eng" size="5">
+        &nbsp;&nbsp; 수학:<input type="text" name="mat" size="5"></td></tr>
+    </tbody>
+    <tfoot>
+      <tr><td align="right" colspan="2"><input type="button" value="입력" onclick="button_input()"></td></tr>
+    </tfoot>
+  </table>
+  <br><br>
+  <table border="1" width="600px">
+    <thead><tr><th>이름</th><th>학번</th>
+    <th>학년</th><th>학과</th><th>필수여부</th>
+    <th>국어</th><th>영어</th><th>수학</th></tr></thead>
+  </table>
+</body>
+<script>
+  function button_input(){alert("입력 버튼을 눌렀습니다.")}</script>
+</html>
