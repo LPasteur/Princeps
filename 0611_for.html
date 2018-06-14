@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>for 문</title>
+</head>
+<body>
+<h3>for문으로 10px~35px 크기 출력</h3>
+<hr>
+<script>
+  for(var size=10; size<=35; size+=5){
+    document.write("<span style='font-size:"+size+"px'>");    // 5픽셀씩 증가된 크기로 텍스트 출력
+    document.write(size+"px");
+    document.write("</span><br>");
+  }
+
+  for(var i=0;i<10;i++){
+    document.write(i);
+  }
+</script>
+</body>
+</html>
