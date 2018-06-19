@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  var box = {
+    color:"red",
+    size:10,
+    amount:0,
+    fill:function(){this.amount+=2},
+    consume:function(){this.amount-=2}
+  };
+  box.fill();
+  document.write(box.amount);
+  box.consume();
+  document.write(box.amount);
+</script>
+</body>
+</html>
