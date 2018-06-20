@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script>
+var dateChecker = function( ){
+  var date = new Date( );
+  alert(date);
+}
+dateChecker();
+
+var really = function( ){
+    return;
+    alert("실행이 되나요");
+}
+really();
+
+var a = {		// a라는 객체
+     // 속성 : 값
+     b : function( ){ return; }      // b의 값은 함수다.
+};
+a.b( );
+
+var mother = function(func){
+    func( );
+}
+var children = function( ){
+    alert("hello");
+}
+mother(children);
+</script>
+</body>
+</html>
