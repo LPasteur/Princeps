@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  var hello = new String("Hello");
+  var hello = "Hello";      // 위의 것과 같은 String객체 생성
+  var res = hello.concat("Javescript");      // HelloJavascript
+  var every = "Boys and Girls";
+  var m = every.length;      // 12
+  var n = "Thank you".length;      // 9
+  if(hello=="Hello"){
+    "hello"<"yes";      // true
+  }
+  var index = every.indexOf("and");     // 5
+  var a = every.slice(5,8);    // and
+  var b = every.substr(5,3);    // and
+  var c = every.substring(5,8);    // and
+  var d = every.replace("and","or");      // Boys or Girls
+  var daughter = "황기태".replace("기태","수희");    // 황수희
+  var upper = every.toUpperCase();    // BOYS AND GIRLS
+  var lower = every.toLowerCase();    //boys and girls
+  var sub = every.split(" ");    // Boys,and,Girls
+  document.write(sub.length);    // 3
+  var name = " kitae ";
+  name = name.trim();      // kitae   앞뒤 공백만 제거
+  var first = every.charAt(0);    // B
+  document.write(first);
+  // String메소드를 실행 후 기존의 변수는 변화없음!!
+</script>
+</body>
+</html>
