@@ -1,32 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>웹 페이지의 구성 요소</title>
-<style>
-	body{background-color:linen; color:green;
-	      margin-left:40px; margin-right:40px;}
-	h3{text-align :center; color:darkred;}
-	hr{height:5px; border:solid grey;
-	   background-color:grey}
-	span{color:blue; font-size:20px;}
-</style>
-<script>
-	function show(){
-		document.getElementById("fig").src="ElvisPresley.png";
-	}
-	function hide(){
-		document.getElementById("fig").src="";
-	}
-</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 </head>
 <body>
-<h3 onmouseover="show()" onmouseout="hide()">
-		Elvis Presley</h3>
-<hr>
-<div><img id="fig" alt="엘비스 프레슬리" src=""></div>
-He was an American singer and actor. In November 1956, he made his 
-film debut in <span>Love Me Tender</span>. He is often referred to 
-as "<span>the king of Rock and Roll</span>."
+  <h1>Hello World</h1>
+
+<script>
+  // var name, address;
+  // name = prompt("이름을 입력하세요.");
+  // address = prompt("주소를 입력하세요.");
+  // document.write(name);
+  // document.write(address);
+  // document.write(name+"\t "+address);
+
+// Numeric
+var num = 10;
+var num1 = 12.3;
+document.write(num);
+document.write("<br>");
+document.write(num1);
+document.write("<br>");
+// String
+name = "choi";
+text = "미래";
+address = "대구광역시 중구 \"남산동\"";
+document.write(name+"<br>");
+document.write(text+"<br>");
+document.write(address+"<br>");
+// Array
+var friends = ["kim","choi","lee"];
+friends.push("홍길동","이소라","차두리");
+
+document.write(friends.length);  //6
+document.write(friends[3]);   //홍길동
+document.write(friends[2]);   //Lee
+document.write("<br>");
+document.write(friends.pop());   //차두리
+document.write(friends.length);   //5
+
+for (i = 0 ; i < friends.length; i++){
+ document.write(friends[i]+"<br>");
+}
+var friends1 = ["영미","숙자","소라"];
+document.write(friends.concat(friends1));   //friends와 friends1합치기
+document.write(friends.join("|"));   //friends값사이에 |넣기
+document.write(friends.sort());   //friends순서대로 정렬
+var week = Array("월","화","수","목","금","토","일");
+document.write(week[0]);
+// Object
+var objectTo = {
+  color : "blue",
+  size :12
+};
+document.write(objectTo.color);
+document.write("<br>");
+document.write(objectTo.size);
+document.write("<br>");
+// Boolean
+//true 혹은 false
+//document.write(bool+<br>+bool1)
+
+// Undefined
+//document.write(aaa); //Null
+// NaN
+var na = 10;
+var na2 = null;
+var text2 = "hello";
+document.write(na*text2); //NaN
+
+</script>
 </body>
 </html>
