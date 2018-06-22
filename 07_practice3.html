@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>backgroundColor modified as time</title>
+</head>
+<body>
+<h3>오전엔 lightblue, 오후엔 orange 배경</h3>
+<hr>
+<script>
+  var current = new Date();
+  if(0<current.getHours()<=11)
+    document.body.style.backgroundColor = "lightskyblue";
+  else
+    document.body.style.backgroundColor = "orange";
+  document.write("현재 시간 : ", current.getHours(), "시,");
+  document.write(current.getMinutes(), "분,", current.getSeconds(), "초");
+</script>
+</body>
+</html>
