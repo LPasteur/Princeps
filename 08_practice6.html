@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>innerHTML</title>
+</head>
+<body>
+<h3>innerHTML</h3>
+<hr>
+<p id="firstP">이번 여름에는 어디로 여행을 갈까요?</p>
+<script>
+var list=["푸른 바다 <span style='background-color:skyblue'>제주도</span>로 가요!!!"];
+var a = prompt("HTML 텍스트 혹은 그냥 텍스트를 입력하세요",list[0]);
+var p = document.getElementById("firstP");
+p.innerHTML = a;
+</script>
+</body>
+</html>
