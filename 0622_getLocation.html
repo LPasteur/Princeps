@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>getLocation</title>
+</head>
+<body>
+<script>
+function getLocation(){
+ if(navigator.geolocation){      // 지원하면
+   navigator.geolocation.getCurrentPosition(function(position){
+     alert(position.coords.latitude + ' ' + position.coords.longitude);
+   }, function(error){
+        consule.error(error);
+     }, {
+         enableHighAccuracy : false,      // 더 정확한 위치 찾기 위함_배터리 소모커짐.
+         maximumAge : 0,           // 한번 찾은 위치정보를 해당 초만큼 캐싱.
+         timeout : Infinity;           // 주어진 초 안에 찾지 못하면 에러 발생.
+        });
+  var watchID = navigator.geolocation.watchPosition(function(position){
+    console.log(position.coords);
+  });
+ else
+    alert('GPS를 지원하지 않습니다.');
+ }
+}
+getLocation();
+</script>
+</body>
+</html>
