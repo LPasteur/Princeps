@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>watchPosition()으로 반복 위치 서비스</title>
+</head>
+<body>
+<h3>watchPositon()으로 반복 위치 서비스</h3>
+<hr>
+<div id="msg">이곳에 위치 정보 출력</div>
+<div id="map"></div>
+<script>
+  if(!navigator.geolocation)
+    alert("지원하지 않음");
+  else{
+    var options = {          // 3개의 값을 가진 전역 객체
+      enableHighAccuracy : false,        // watchPosition()의 마지막 매개변수로 전달
+      timeout : 5000,
+      maximumAge : 0};
+    var img = new Image();
+    var count = 0;
+    var watchID;          // changed() 콜백함수 등록하고, 반복된 위치 서비스를 시작시킨다.
+    watchID = navigator.geolocation.watchPosition(changed, null, options);
+  }
+
+  function changed(position){      // 위치가 바뀌면 changed()가 호출되고, 위치정보가 들어있는 position객체가 매개변수로 넘어온다.
+    if(count == Infinity){           // clearWatch() 테스트를 위해 무한 서비스
+      navigator.geolocation.clearWatch(watchID);      // 반복 서비스 종료
+      document.getElementById("msg").innerHTML = "위치 서비스 종료";
+      return;
+    }
+    var lat = position.coords.latitude;        // 변경된 위도
+    var lon = position.coords.longitude;        // 변경된 경도
+    var text = count + ": (위도 " + lat + "º, 경도 " + lon + "º)로 변경됨<br>";
+    document.getElementById("msg").innerHTML = text;        // 위치 정보 출력
+
+    img.src = "https://maps.googleapis.com/maps/api/staticmap?center="        // 지도 이미지 갱신
+                + lat + "," + lon +
+                "&zoom=13&size=400x300&sensor=false&markers=color:red&7Clabel:C%7C"
+                + lat + "," + lon;
+    if(count == 0)          // 처음이면 구글 지도 이미지 부착
+      document.getElementById("map").appendChild(img);        // 지도 이미지 부착
+    count++;          // 갱신 횟수 증가
+  }
+</script>
+</body>
+</html>
