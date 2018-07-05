@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>setInterval() and clearInterval()</title>
+  <script>
+    var current = setInterval(tm,1000);
+    function tm(){
+      var d = new Date();
+      document.getElementById("go").style.border = "1px solid #000000";
+      document.getElementById("go").style.width = "100px";
+      document.getElementById("go").style.backgroundColor = "aliceblue";
+      document.getElementById("go").innerHTML = d.toLocaleTimeString();
+    }
+    function clr(){
+      if(current!=null){
+        current=clearInterval(current);
+        document.getElementById("go").style.color = "grey";
+        current=null;}
+      else if(current==null){
+        document.getElementById("go").style.color = "black";
+        current=setInterval(tm,1000);
+        current!=null;}
+    }
+  </script>
+</head>
+<body onload="tm()">
+<h3>div 태그에 시계 만들기</h3>
+<p>시계를 클릭하면 시계가 멈추고 다시 클릭하면 가기 시작한다.</p>
+<hr>
+<div id="go" onclick="clr()"></div>
+</body>
+</html>
