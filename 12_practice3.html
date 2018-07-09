@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>포스트잇</title>
+<script>
+function store() {
+	if(!window.localStorage) { alert("지원하지 않습니다."); return;}
+	var name = document.getElementById("name").value;
+	var message = document.getElementById("message").value;
+	localStorage.setItem(name, message);
+}
+function view() {
+	var win = window.open("prac12-03-view.html", "viewwin");
+}
+</script>
+</head>
+<body>
+<h3>포스트잇</h3>
+<hr>
+<form>
+<label>제목 <input id="name" type="text" size="20"></label>
+<br>
+<label>메모입력<br>
+ <textarea id="message" cols="30" rows="5"></textarea>
+</label>
+<br>
+<input type="button" value="저장" onclick="store()">
+<input type="button" value="보기" onclick="view()">
+</form>
+</body>
+</html>
