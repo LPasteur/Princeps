@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    function over(obj){
+      obj.style.background='yellow';
+    }
+    function out(obj){
+      obj.style.background='white';
+    }
+    function overID(){
+      document.getElementById("color").style.background="yellow";
+    }
+    function outID(){
+      document.getElementById("color").style.background="white";
+    }
+  </script>
+</head>
+<body>
+  <div id="color" onmouseover="overID()" onmouseout="outID()">
+    여기에 마우스를 올리면 배경색이 노란색으로 변합니다.</div>
+  <div onmouseover="change(this,'yellow')" onmouseout="change(this,'white')">
+    여기에 마우스를 올리면 배경색이 노란색으로 변합니다.</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>text drawing</title>
+</head>
+<body>
+<h3>text drawing</h3>
+<hr>
+<canvas id="myCanvas" style="background-color:beige" width="500" height="400"></canvas>
+<script>
+  var canvas = document.getElementById("myCanvas");
+  var context = canvas.getContext("2d");
+  context.strokeStyle = "blue";
+  // font 프로퍼티 활용
+  for(var i=0; i<4; i++){
+    context.font = (10 + i*10) +"px forte";
+    context.strokeText("Javascript 재밌나?", 10, 30+i*50);
+  }
+  // 텍스트 외곽선 그리기
+  context.font = "italic 50px forte";
+  context.strokeStyle = "magenta";
+  context.lineWidth = 3;
+  context.textAlign = "left";
+  context.strokeText("Javascript 재밌나?", 50, 250);
+  // 텍스트 채워 그리기
+  context.fillStyle = "green";
+  context.textAlign = "right";
+  context.fillText("Javascript 재밌나?", 490, 300);
+</script>
+</body>
+</html>

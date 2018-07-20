@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Table tag</title>
+<style>
+table{border-collapse:collapse;text-align:right;}
+td,tfoot th{border-bottom:1px solid grey;}
+thead,tfoot{background:darkgrey;color:yellow;}
+thead th{height:40px;width:100px;}
+td{height:20px;width:100px;padding:10px;}
+tbody tr:nth-child(even){background:aliceblue;}
+tbody tr:hover{background:pink;}
+</style>
+</head>
+<body>
+<h1>1학기 성적</h1>
+<hr>
+<table>
+	<thead>
+		<tr>
+			<th>이름</th><th>HTML</th><th>CSS</th>
+		</tr>
+	</thead>
+	<tfoot>
+		<tr>
+			<th>합</th><th>310</th><th>249</th>
+		</tr>
+	</tfoot>
+	<tbody>
+		<tr>
+			<td>황기태</td><td>80</td><td>70</td>
+		</tr>
+		<tr>
+			<td>이재문</td><td>95</td><td>99</td>
+		</tr>
+		<tr>
+			<td>이병은</td><td>85</td><td>90</td>
+		</tr>
+		<tr>
+			<td>김남윤</td><td>50</td><td>40</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

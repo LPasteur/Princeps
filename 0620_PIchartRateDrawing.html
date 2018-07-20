@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>캔버스에 파이차트 그리기</title>
+</head>
+<body>
+<h3>학점 별로 학생 수를 입력하면 파이차트로 비율그리기</h3>
+<hr>
+A <input type="number" id="a" value="0">명
+B <input type="number" id="b" value="0">명
+C <input type="number" id="c" value="0">명<br>
+D <input type="number" id="d" value="0">명
+F <input type="number" id="f" value="0">명
+<input type="button" value="차트그리기" id="drawing" onclick="calculate()"><br>
+<canvas id="myCanvas" style="background-color:aliceblue" width="600" height="400"></canvas>
+<script>
+  var canvas = document.getElementById("myCanvas");
+  var context = canvas.getContext("2d");
+  function calculate(){
+    context.clearRect(0,0,canvas.width,canvas.height);
+    // 비율 계산하기
+    var a = parseFloat(document.getElementById("a").value);
+    var b = parseFloat(document.getElementById("b").value);
+    var c = parseFloat(document.getElementById("c").value);
+    var d = parseFloat(document.getElementById("d").value);
+    var f = parseFloat(document.getElementById("f").value);
+    var sum = a + b + c + d + f;
+    var a_rate = a/sum;
+    var b_rate = b/sum;
+    var c_rate = c/sum;
+    var d_rate = d/sum;
+    var f_rate = f/sum;
+    var num = [a_rate, b_rate, c_rate, d_rate, f_rate];
+    var numSum = new Array();
+    var ns = 0;
+    for(k=0; k<num.length; k++){
+      ns += parseFloat(num[k]);
+      numSum[k] = ns;
+    }
+    // 범례 만들기
+    context.strokeStyle = "blue";
+    var colors = ["blue","green","yellow","magenta","red"];
+    var grades = ["A","B","C","D","F"];
+    for(var i=0; i<5; i++){
+      context.font="15px arial";
+      context.strokeText(grades[i]+"학점"+(num[i]*100).toFixed(2)+"% : "+colors[i],5,15+i*20);
+    }
+    // 파이차트 만들기
+    context.beginPath();
+    context.moveTo(300,200);
+    context.arc(300,200,100,0,num[0]*2*Math.PI);
+    context.closePath();
+    context.fillStyle = colors[0];
+    context.fill();
+    for(var j=1; j<5; j++){
+      context.beginPath();
+      context.moveTo(300,200);
+      context.arc(300,200,100,numSum[j-1]*2*Math.PI,numSum[j]*2*Math.PI);
+      context.closePath();
+      context.fillStyle = colors[j];
+      context.fill();
+    }
+  }
+</script>
+</body>
+</html>

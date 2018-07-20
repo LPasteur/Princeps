@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>회원가입 폼</title>
+  <style>
+  div {
+    display: block;
+}
+  .userloginForm {
+    float: left;
+    margin-right: 100px;
+    line-height: 1.4;
+    font-size: 0.875em;
+    font-family: sans-serif;
+    }
+    .mw-ui-input {
+    background-color: #fff;
+    color: #000000;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border: 1px solid #a2a9b1;
+    border-radius: 2px;
+    padding: 0.57142857em 0.57142857em 0.5em;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: 1.07142857em;
+    vertical-align: middle;
+   }
+  .fancycaptcha-captcha-container{
+    background-color: #f8f9fa;
+    margin-bottom: 15px;
+    border: 1px solid #c8ccd1;
+    border-radius: 2px;
+    padding: 8px;
+    text-align: center;
+    font-size: 0.875em;
+    line-height: 1.4;
+    }
+    .fancycaptcha-captcha-and-reload {
+    border: 1px solid #c8ccd1;
+    border-radius: 2px 2px 0 0;
+    display: table-cell;
+    width: 270px;
+    background-color: #fff;
+    }
+    .fancycaptcha-image-container {
+    width: 100%;
+    }
+    .fancycaptcha-image-container .fancycaptcha-reload {
+    position: absolute;
+    bottom: 0;
+    right: 4px;
+    }
+    .fancycaptcha-captcha-container .mw-ui-input {
+    margin-top: -1px;
+    border-color: #c8ccd1;
+    border-radius: 0 0 2px 2px;
+    }
+    .mw-createacct-captcha-assisted {
+    display: block;
+    margin-top: 0.5em;
+    }
+    .fancycaptcha-reload {
+    margin: 0 0 0 3px;
+    padding: 1px 2px 1px 12px;
+    color: #0645ad;
+    cursor: pointer;
+    cursor: hand;
+    }
+    .fancycaptcha-reload-loading {
+    margin: 0 0 0 3px;
+    padding: 1px 2px 1px 12px;
+    color: #0645ad;
+    cursor: pointer;
+    cursor: hand;
+    }
+    .mw-ui-button.mw-ui-progressive {
+    background-color: #3366cc;
+    color: #fff;
+    border: 1px solid #3366cc;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+}
+.mw-ui-button {
+    font-family: inherit;
+    font-size: 1em;
+    display: inline-block;
+    min-width: 4em;
+    max-width: 28.75em;
+    padding: 0.546875em 1em;
+    line-height: 1.286;
+    margin: 0;
+    border-radius: 2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    zoom: 1;
+    vertical-align: middle;
+    background-color: #f8f9fa;
+    color: #222222;
+    border: 1px solid #a2a9b1;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+  </style>
+</head>
+<body>
+<h3>Create account</h3>
+<hr>
+<div class="userloginForm">
+<form method="post" action="">
+  Username <a background="none" text-decoration="none" href="/wiki/Wikipedia:Username_policy" title="Wikipedia:Username policy">(help me choose)</a><br>
+  <div class="mw-ui-input">
+  <input name="wpName" size="20" class="loginText mw-ui-input" placeholder="Enter your username" tabindex="1" required="">
+  <span style="display: none;"></span></div><br>
+  Password<br>
+  <div class="mw-ui-input">
+  <input name="wpName" size="20" class="loginText mw-ui-input" placeholder="Enter a password" tabindex="1" required="">
+  <span style="display: none;"></span></div><br>
+  Confirm password<br>
+  <div class="mw-ui-input">
+  <input name="wpName" size="20" class="loginText mw-ui-input" placeholder="Enter password again" tabindex="1" required="">
+  <span style="display: none;"></span></div><br>
+  Email address(optional)<br>
+  <div class="mw-ui-input">
+  <input name="wpName" size="20" class="loginText mw-ui-input" placeholder="Enter your email address" tabindex="1" required="">
+  <span style="display: none;"></span></div><br>
+  <span style="color:#36c">How do we collect data for detecting bots?</span>
+  <p style="font-family:sans-serif;font-size: 0.875em;">To protect the wiki against automated<br>
+  account creation, we kindly ask you to enter<br>
+  the words that appear below in the box<br>
+  (more info):</p>
+  <label style="font-family:sans-serif;font-size:0.875em;">CAPTCHA Security check</label><br>
+  <div class="fancycaptcha-captcha-container">
+    <div class="fancycaptcha-captcha-and-reload">
+      <div class="fancycaptcha-image-container">
+        <img class="fancycaptcha-image" src="media/check.png" alt="">
+        <small class="confirmedit-captcha-reload fancycaptcha-reload-loading">Refresh</small></div></div>
+      <input id="mw-input-captchaWord" name="captchaWord" class="mw-ui-input" size="12" autocomplete="off" autocorrect="off" autocapitalize="off"
+      placeholder="Enter the text you see on the image" tabindex="6" required="">
+      <small class="mw-createacct-captcha-assisted">
+        Can't see the image?
+        <a href="/wiki/Wikipedia:Request_an_account" title="Wikipedia:Request an account">
+          Request an account</a></small></div>
+          <div class="mw-htmlform-field-HTMLSubmitField mw-ui-vform-field"><div class="mw-input mw-htmlform-nolabel">
+            <button class="mw-htmlform-submit mw-ui-button mw-ui-primary mw-ui-progressive"
+            id="wpCreateaccount" type="submit" name="wpCreateaccount" value="Create your account" tabindex="8">Create your account</button>
+</div></div>
+</div>
+</form></div>
+</body>
+</html>

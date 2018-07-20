@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    function createDIV(){
+      var newElement = document.createElement('div');
+      var text = document.createTextNode('텍스트');
+      var fragment = document.createDocumentFragment();    // fragment : 가짜를 하나 만드는 것
+      newElement.appendChild(text);
+      fragment.appendChild(newElement);
+      document.body.appendChild(fragment);
+      // newElement.innerHTML = "새로 생성된 DIV입니다."
+      // document.body.appendChild(newELement);    // 마지막 순서의 자식 태그에 추가
+      // var pTag = document.getElementsByTagName('p')[0];
+      // pTag.innerHTML = 'good~~';
+      // pTag.innerHTML = '<b> bold </b>';
+    }
+  </script>
+</head>
+<body>
+<p>DOM 트리에 동적으로 객체를 삽입합니다.</p>
+<a href="javascript:createDIV();">DIV 생성</a>
+</body>
+</html>

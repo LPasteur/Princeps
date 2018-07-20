@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>printStar</title>
+  <script>
+    function printStar(n){
+      if(isNaN(n) || n<=0){
+          alert("입력 오류입니다.");
+          return;
+      }
+      for(j=1;j<=n;j++){
+        for(i=1;i<=j;i++){
+          document.write("*");
+        }
+        document.write("<br>");
+      }
+    }
+    </script>
+</head>
+<body>
+<h3>별문자 출력하기</h3>
+<hr>
+<script>
+  var n = prompt("숫자를 입력하세요.");
+  printStar(n);
+</script>
+</body>
+</html>
