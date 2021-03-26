@@ -15,21 +15,21 @@ public class ArrayName {
 			System.out.print(j);
 		System.out.println();
 		
-		String name1 = "½ÅÇÑºû";
+		String name1 = "-";
 		byte age = 29;
-		String number = "010-5314-6236";
+		String number = "-";
 		boolean marriage = false;
 		double weight = 63.3;
-		System.out.println("ÀÌ¸§Àº "+name1+", ³ªÀÌ´Â "+age+"¼¼, ÀüÈ­¹øÈ£´Â "+number+", °áÈ¥À¯¹«´Â "+marriage+", ¸ö¹«°Ô´Â "+weight+"kg ÀÔ´Ï´Ù.");
+		System.out.println("ì´ë¦„ì€ "+name1+", ë‚˜ì´ëŠ” "+age+"ì„¸, ì „í™”ë²ˆí˜¸ëŠ” "+number+", ê²°í˜¼ìœ ë¬´ëŠ” "+marriage+", ëª¸ë¬´ê²ŒëŠ” "+weight+"kg ì…ë‹ˆë‹¤.");
 		
-		System.out.println("ÀÌ¸§, ³ªÀÌ, ÀüÈ­¹øÈ£, °áÈ¥À¯¹«, ¸ö¹«°Ô¸¦ ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("ì´ë¦„, ë‚˜ì´, ì „í™”ë²ˆí˜¸, ê²°í˜¼ìœ ë¬´, ëª¸ë¬´ê²Œë¥¼ ì…ë ¥í•˜ì„¸ìš”.");
 		Scanner in = new Scanner(System.in);
 		String a = in.next();
 		byte b = in.nextByte();
 		String c = in.next();
 		boolean d = in.nextBoolean();
 		double e = in.nextDouble();
-		System.out.println("ÀÌ¸§Àº "+a+", ³ªÀÌ´Â "+b+"¼¼, ÀüÈ­¹øÈ£´Â "+c+", °áÈ¥À¯¹«´Â "+d+", ¸ö¹«°Ô´Â "+e+"kg ÀÔ´Ï´Ù.");
+		System.out.println("ì´ë¦„ì€ "+a+", ë‚˜ì´ëŠ” "+b+"ì„¸, ì „í™”ë²ˆí˜¸ëŠ” "+c+", ê²°í˜¼ìœ ë¬´ëŠ” "+d+", ëª¸ë¬´ê²ŒëŠ” "+e+"kg ì…ë‹ˆë‹¤.");
 		in.close();
 	}
 }
